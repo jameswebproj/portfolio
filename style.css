@@ -104,7 +104,7 @@ section:last-of-type {
     justify-content: center;
     align-items: center;
     min-height: 80vh; /* Takes up most of the viewport height */
-    padding-top: 100px; /* Space for fixed header */
+    padding-top: 40px; /* Reduced space at the top */
     box-shadow: inset 0 -5px 10px rgba(0,0,0,0.05);
 }
 
@@ -113,7 +113,7 @@ section:last-of-type {
     max-width: 1200px; /* Limit banner width if desired, or make it fluid */
     height: auto; /* Maintain aspect ratio */
     display: block; /* Remove extra space below image */
-    margin-bottom: 20px; /* Space between banner and profile pic */
+    margin-bottom: 30px; /* Increased space between banner and profile pic */
 }
 
 .profile-pic {
@@ -230,6 +230,13 @@ section:last-of-type {
     color: #fff;
     border-radius: 5px;
     transition: background-color 0.3s ease;
+    /* Add margin for spacing between buttons */
+    margin-right: 10px; /* Space between Visit Website (Main) and (Sub) */
+    margin-bottom: 10px; /* Space if buttons wrap to next line */
+}
+
+.project-link:last-of-type {
+    margin-right: 0; /* No right margin for the last button in the group */
 }
 
 .project-link:hover {
@@ -237,6 +244,32 @@ section:last-of-type {
     text-decoration: none;
 }
 
+/* Email Campaigns Section */
+.email-list-container ul {
+    list-style: none; /* Remove default bullet points */
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 15px 30px; /* Row gap, Column gap */
+}
+
+.email-list-container ul li {
+    background-color: #f9f9f9;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    font-size: 1.05em;
+}
+
+.email-list-container ul li a {
+    color: #0056b3;
+    font-weight: 500;
+}
+
+.email-list-container ul li a:hover {
+    text-decoration: underline;
+}
 
 /* Contact Section */
 .contact p {
@@ -276,7 +309,13 @@ footer {
     .hero p {
         font-size: 1em;
     }
-    .skills-grid, .project-grid {
+    .skills-grid, .project-grid, .email-list-container ul {
         grid-template-columns: 1fr; /* Stack columns on small screens */
+    }
+    .project-link {
+        margin-right: 0; /* Remove right margin for stacking buttons */
+        width: 100%; /* Make buttons full width on small screens */
+        text-align: center;
+        box-sizing: border-box; /* Include padding and border in the element's total width and height */
     }
 }
