@@ -100,11 +100,20 @@ section:last-of-type {
     background-color: #e0f2f7; /* Light blue background */
     text-align: center;
     display: flex;
+    flex-direction: column; /* Stack items vertically */
     justify-content: center;
     align-items: center;
     min-height: 80vh; /* Takes up most of the viewport height */
     padding-top: 100px; /* Space for fixed header */
     box-shadow: inset 0 -5px 10px rgba(0,0,0,0.05);
+}
+
+.hero-banner {
+    width: 100%; /* Ensure banner takes full width of its container */
+    max-width: 1200px; /* Limit banner width if desired, or make it fluid */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove extra space below image */
+    margin-bottom: 20px; /* Space between banner and profile pic */
 }
 
 .profile-pic {
