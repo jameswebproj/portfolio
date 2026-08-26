@@ -1,21 +1,23 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Smooth scrolling for navigation links
-    document.querySelectorAll('nav a').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
+document.addEventListener('DOMContentLoaded', function () {
+    // Mobile nav toggle
+    const toggle = document.querySelector('.nav-toggle');
+    const menu = document.getElementById('nav-menu');
 
-            const targetId = this.getAttribute('href').substring(1);
-            const targetElement = document.getElementById(targetId);
-
-            if (targetElement) {
-                window.scrollTo({
-                    top: targetElement.offsetTop - (document.querySelector('header').offsetHeight), // Adjust for fixed header
-                    behavior: 'smooth'
-                });
-            }
+    if (toggle && menu) {
+        toggle.addEventListener('click', function () {
+            const open = menu.classList.toggle('open');
+            toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
         });
-    });
+        // Close menu after choosing a link (mobile)
+        menu.querySelectorAll('a').forEach(function (link) {
+            link.addEventListener('click', function () {
+                menu.classList.remove('open');
+                toggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+    }
 
-    // Optional: Log to console to confirm script is loading
-    console.log("Portfolio script loaded!");
+    // Current year in footer
+    const yearEl = document.getElementById('year');
+    if (yearEl) { yearEl.textContent = new Date().getFullYear(); }
 });
