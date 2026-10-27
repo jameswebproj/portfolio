@@ -1,23 +1,21 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Mobile nav toggle
-    const toggle = document.querySelector('.nav-toggle');
-    const menu = document.getElementById('nav-menu');
-
-    if (toggle && menu) {
-        toggle.addEventListener('click', function () {
-            const open = menu.classList.toggle('open');
-            toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-        });
-        // Close menu after choosing a link (mobile)
-        menu.querySelectorAll('a').forEach(function (link) {
-            link.addEventListener('click', function () {
-                menu.classList.remove('open');
-                toggle.setAttribute('aria-expanded', 'false');
-            });
-        });
-    }
-
-    // Current year in footer
-    const yearEl = document.getElementById('year');
+    // Current year in the footer
+    var yearEl = document.getElementById('year');
     if (yearEl) { yearEl.textContent = new Date().getFullYear(); }
+
+    // Hide optional screenshots that haven't been uploaded yet, so no broken image shows
+    document.querySelectorAll('img[data-optional]').forEach(function (img) {
+        var hideFigure = function () {
+            var figure = img.closest('figure');
+            if (figure) { figure.hidden = true; }
+            var tool = img.closest('.tool');
+            if (tool) { tool.classList.add('tool--no-shot'); }
+        };
+        if (img.complete && img.naturalWidth === 0) {
+            hideFigure();
+        } else {
+            img.addEventListener('error', hideFigure);
+        }
+    });
 });
+
