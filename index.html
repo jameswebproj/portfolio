@@ -3,218 +3,205 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>James Le — Web & Digital Marketing</title>
-    <meta name="description" content="James Le — web professional and digital marketer. Websites, paid campaigns, analytics, and accessibility for organizations that need measurable results.">
-    <link rel="stylesheet" href="style.css">
+    <title>James Le | Web, Accessibility &amp; Digital Marketing</title>
+    <meta name="description" content="James Le builds accessible websites, internal tools, and digital campaigns with measurable results.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="James Le | Web, Accessibility &amp; Digital Marketing">
+    <meta property="og:description" content="Accessible websites, internal tools, and digital campaigns with measurable results.">
+    <meta property="og:url" content="https://jameswebproj.github.io/portfolio/">
+    <meta property="og:image" content="https://jameswebproj.github.io/portfolio/images/profile_pic.jpg">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231F3F77'/%3E%3Crect x='8' y='22' width='16' height='4' fill='%23FFD23F'/%3E%3C/svg%3E">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <a href="#main" class="skip-link">Skip to content</a>
+    <a href="#main" class="skip-link">Skip to main content</a>
 
     <header class="site-header">
-        <nav aria-label="Primary">
-            <a href="#top" class="logo">James&nbsp;Le</a>
-            <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Menu">
-                <span></span><span></span><span></span>
-            </button>
-            <ul id="nav-menu">
+        <nav class="site-nav" aria-label="Primary">
+            <a href="#top" class="site-name">James Le</a>
+            <ul>
                 <li><a href="#work">Work</a></li>
-                <li><a href="#video">Video</a></li>
-                <li><a href="#emails">Campaigns</a></li>
+                <li><a href="#tools">Tools</a></li>
+                <li><a href="#email">Email</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#contact" class="nav-cta">Contact</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main id="main">
-        <section id="top" class="hero">
-            <div class="hero-inner">
-                <p class="eyebrow">Web &nbsp;/&nbsp; Digital Marketing &nbsp;/&nbsp; Accessibility</p>
-                <h1>I build websites that<br><em>move the numbers.</em></h1>
-                <p class="hero-lede">Web professional with a Computer Science background and 5+ years turning sites, email, and paid campaigns into measurable results — from a 67:1 return on ad spend to accessibility that keeps organizations compliant.</p>
-                <div class="hero-actions">
-                    <a href="#work" class="btn btn-primary">See the work</a>
-                    <a href="#contact" class="btn btn-ghost">Get in touch</a>
+        <section id="top" class="hero" aria-labelledby="hero-title">
+            <h1 id="hero-title">I build accessible websites and the tools behind them.</h1>
+            <p class="lede">I'm a web professional with a Computer Science degree and 5+ years of web, accessibility, and digital marketing work, currently at Cal Poly Pomona Enterprises.</p>
+            <p class="proof">The first paid campaign I ran at CPPE, for the Pumpkin Festival, turned <strong>$1,250</strong> in ad spend into <strong>$84,110</strong> in attributed revenue.</p>
+            <div class="hero-actions">
+                <a href="#work" class="btn btn-primary">See my work</a>
+                <a href="#contact" class="btn btn-secondary">Contact me</a>
+            </div>
+        </section>
+
+        <section id="work" class="section" aria-labelledby="work-title">
+            <div class="section-inner">
+                <h2 id="work-title">Selected work</h2>
+                <ul class="work-list">
+                    <li class="work-item">
+                        <div class="work-meta">
+                            <h3>Pumpkin Festival paid campaign</h3>
+                            <p>Cal Poly Pomona Enterprises<br>2025</p>
+                        </div>
+                        <div class="work-body">
+                            <p>Planned and ran CPPE's first paid digital campaign across Search, Display, and Performance Max, and owned keyword, bid, and budget optimization from start to finish.</p>
+                            <p>Result: a <strong>67:1 return on ad spend</strong>, <strong>$0.31</strong> per conversion, and <strong>4,084</strong> tickets sold.</p>
+                            <p class="work-links"><a href="https://github.com/jameswebproj/portfolio/blob/91cd9fda5cce3497a5db34ee259f94e299a1e16f/Pumpkin%20Fest%20Google%20Ads.pdf" target="_blank" rel="noopener">Read the campaign report (PDF)<span class="visually-hidden">, opens in a new tab</span></a></p>
+                        </div>
+                    </li>
+                    <li class="work-item">
+                        <div class="work-meta">
+                            <h3>CPPE websites and accessibility</h3>
+                            <p>Cal Poly Pomona Enterprises<br>2023–present</p>
+                        </div>
+                        <div class="work-body">
+                            <p>Accessibility lead for CPPE's web properties: I audit and remediate websites and PDF documents to WCAG 2.1 and Section 508. I also manage design and administration for sites including Dining Services and Kellogg West, and lead a team of student assistants.</p>
+                            <p class="work-links">
+                                <a href="https://cppdining.com/" target="_blank" rel="noopener">CPPE Dining Services<span class="visually-hidden">, opens in a new tab</span></a>
+                                <a href="https://kelloggwest.com/" target="_blank" rel="noopener">Kellogg West<span class="visually-hidden">, opens in a new tab</span></a>
+                            </p>
+                        </div>
+                    </li>
+                    <li class="work-item">
+                        <div class="work-meta">
+                            <h3>WooCommerce growth and AWS migration</h3>
+                            <p>SoCal Arts<br>2023–2025</p>
+                        </div>
+                        <div class="work-body">
+                            <p>Raised merchandise sales 15% through SEO and store optimization, and led a hosting migration to AWS that improved site performance by 25%.</p>
+                            <p class="work-links"><a href="https://socal-arts.com/" target="_blank" rel="noopener">SoCal Arts site<span class="visually-hidden">, opens in a new tab</span></a></p>
+                        </div>
+                    </li>
+                    <li class="work-item">
+                        <div class="work-meta">
+                            <h3>Client website development</h3>
+                            <p>Wesson Tech Services<br>2021–2023</p>
+                        </div>
+                        <div class="work-body">
+                            <p>Managed the full build for client sites, including health clinics, TV studios, consulting firms, and breweries, from scope to delivery using WordPress and Webflow.</p>
+                            <p class="work-links">
+                                <a href="https://www.myofficeapps.com/" target="_blank" rel="noopener">MyOfficeApps site<span class="visually-hidden">, opens in a new tab</span></a>
+                                <a href="https://ibrewworks.com/" target="_blank" rel="noopener">Innovation Brew Works site<span class="visually-hidden">, opens in a new tab</span></a>
+                            </p>
+                        </div>
+                    </li>
+                    <li class="work-item">
+                        <div class="work-meta">
+                            <h3>Shopify storefront and product SEO</h3>
+                            <p>Artsolute Media Group<br>2020</p>
+                        </div>
+                        <div class="work-body">
+                            <p>Built and customized a Shopify storefront during a COVID-era move to e-commerce, and ran product-page SEO that lifted the site's US ranking from 120,000 to 13,000 in five months.</p>
+                            <p class="work-links"><a href="https://artsolutemediagroup.com/" target="_blank" rel="noopener">Artsolute Media Group site<span class="visually-hidden">, opens in a new tab</span></a></p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="tools" class="section section--tint" aria-labelledby="tools-title">
+            <div class="section-inner">
+                <h2 id="tools-title">Internal tools</h2>
+                <p class="section-intro">I build internal tools with AI-assisted development, from the first requirement to a deployed tool people use.</p>
+                <div class="tool">
+                    <div class="tool-text">
+                        <h3>Marketing web tool</h3>
+                        <p class="tool-org">Cal Poly Pomona Enterprises<br>2026</p>
+                        <p>I directed Claude to design and build an internal tool for CPPE's marketing team, replacing a manual process for collecting finished creative. It runs on its own domain and is in active use.</p>
+                        <ul class="tool-features">
+                            <li>Staff upload finished assets to one shared place.</li>
+                            <li>It collects open and click statistics for eblasts.</li>
+                            <li>It generates QR codes for print and event materials.</li>
+                        </ul>
+                    </div>
+                    <figure class="tool-shot">
+                        <img src="images/cppen-tool.png" alt="Screenshot of the marketing web tool dashboard" data-optional>
+                        <figcaption>The tool's dashboard. It's login-protected, so internal data has been removed from this screenshot.</figcaption>
+                    </figure>
                 </div>
-                <dl class="hero-stats">
-                    <div>
-                        <dt>67:1</dt>
-                        <dd>Return on ad spend, first paid campaign</dd>
-                    </div>
-                    <div>
-                        <dt>$84K</dt>
-                        <dd>Revenue attributed to that campaign</dd>
-                    </div>
-                    <div>
-                        <dt>120K&rarr;13K</dt>
-                        <dd>US ranking lift via product SEO</dd>
-                    </div>
-                </dl>
             </div>
         </section>
 
-        <section id="work" class="section">
-            <div class="section-head">
-                <span class="section-index">01</span>
-                <h2>Selected work</h2>
-            </div>
-            <div class="work-grid">
-                <article class="work-card work-card--feature">
-                    <div class="work-tag">Paid media &nbsp;&middot;&nbsp; Cal Poly Pomona Enterprises</div>
-                    <h3>Pumpkin Festival — first-ever paid ad campaign</h3>
-                    <p>Planned and ran CPPE's first paid digital campaign across Search, Display, and Performance Max. Owned keyword, bid, and budget optimization end to end.</p>
-                    <ul class="metric-row">
-                        <li><strong>67:1</strong><span>ROAS</span></li>
-                        <li><strong>$84,110</strong><span>attributed revenue</span></li>
-                        <li><strong>$0.31</strong><span>cost / conversion</span></li>
-                        <li><strong>4,084</strong><span>tickets sold</span></li>
-                    </ul>
-                    <a href="https://github.com/jameswebproj/portfolio/blob/91cd9fda5cce3497a5db34ee259f94e299a1e16f/Pumpkin%20Fest%20Google%20Ads.pdf" target="_blank" rel="noopener" class="card-link">Read the campaign report &rarr;</a>
-                </article>
-
-                <article class="work-card">
-                    <div class="work-tag">Web management &nbsp;&middot;&nbsp; CPPE</div>
-                    <h3>Auxiliary websites &amp; accessibility</h3>
-                    <p>Manage design and administration of CPPE web properties including Dining Services and Kellogg West. Lead a team of student assistants and remediate sites to WCAG&nbsp;2.1 / Section&nbsp;508.</p>
-                    <div class="card-links">
-                        <a href="https://cppdining.com/" target="_blank" rel="noopener" class="card-link">CPPE Dining &rarr;</a>
-                        <a href="https://kelloggwest.com/" target="_blank" rel="noopener" class="card-link">Kellogg West &rarr;</a>
-                    </div>
-                </article>
-
-                <article class="work-card">
-                    <div class="work-tag">E-commerce &amp; SEO &nbsp;&middot;&nbsp; SoCal Arts</div>
-                    <h3>WooCommerce growth + AWS migration</h3>
-                    <p>Drove a 15% increase in merchandise sales through SEO and store optimization, and led a hosting migration to AWS that improved performance by 25%.</p>
-                    <a href="https://socal-arts.com/" target="_blank" rel="noopener" class="card-link">Visit site &rarr;</a>
-                </article>
-
-                <article class="work-card">
-                    <div class="work-tag">E-commerce &nbsp;&middot;&nbsp; Artsolute Media Group</div>
-                    <h3>Shopify storefront &amp; product SEO</h3>
-                    <p>Built and customized a Shopify storefront during a COVID-era e-commerce pivot, and ran product-page SEO that lifted US ranking from 120,000 to 13,000 in five months.</p>
-                    <a href="https://artsolutemediagroup.com/" target="_blank" rel="noopener" class="card-link">Visit site &rarr;</a>
-                </article>
-
-                <article class="work-card">
-                    <div class="work-tag">Agency delivery &nbsp;&middot;&nbsp; Wesson Tech Services</div>
-                    <h3>Client website development</h3>
-                    <p>Managed the full build lifecycle for client sites — health clinics, TV studios, consulting firms, breweries — from scope to delivery using WordPress and Webflow.</p>
-                    <div class="card-links">
-                        <a href="https://www.myofficeapps.com/" target="_blank" rel="noopener" class="card-link">Sample client 1 &rarr;</a>
-                        <a href="https://ibrewworks.com/" target="_blank" rel="noopener" class="card-link">Sample client 2 &rarr;</a>
-                    </div>
-                </article>
+        <section id="email" class="section" aria-labelledby="email-title">
+            <div class="section-inner">
+                <h2 id="email-title">Email campaigns</h2>
+                <p class="section-intro">I design, build, and send HTML email for CPPE's dining, housing, retail, real estate, and event teams, reaching 30,000+ recipients per send with open and click tracking.</p>
+                <p class="award">I built the web pages and eblasts for two team campaigns that earned MarCom awards: Platinum for Hot Dog Caper and Gold for Burger Envy.</p>
+                <h3 class="list-title">Live previews</h3>
+                <ul class="email-list">
+                    <li><a href="https://cppe.preview-beefreecontent.com/UeHX" target="_blank" rel="noopener">Mother's Day Buffet and Brunch<span class="visually-hidden">, opens in a new tab</span></a></li>
+                    <li><a href="https://cppe.preview-beefreecontent.com/v8PA" target="_blank" rel="noopener">Waymaker<span class="visually-hidden">, opens in a new tab</span></a></li>
+                    <li><a href="https://cppe.preview-beefreecontent.com/VllQ" target="_blank" rel="noopener">Innovation Brew Works 10th Anniversary<span class="visually-hidden">, opens in a new tab</span></a></li>
+                    <li><a href="https://cppe.preview-beefreecontent.com/lUdL" target="_blank" rel="noopener">Pi Day<span class="visually-hidden">, opens in a new tab</span></a></li>
+                    <li><a href="https://cppe.preview-beefreecontent.com/Z29tD" target="_blank" rel="noopener">Fairoaks Walk Listing<span class="visually-hidden">, opens in a new tab</span></a></li>
+                    <li><a href="https://cppe.preview-beefreecontent.com/zmLi" target="_blank" rel="noopener">Pumpkin Fest<span class="visually-hidden">, opens in a new tab</span></a></li>
+                    <li><a href="https://cppe.preview-beefreecontent.com/rU73" target="_blank" rel="noopener">Student Housing<span class="visually-hidden">, opens in a new tab</span></a></li>
+                    <li><a href="https://cppe.preview-beefreecontent.com/bcvU" target="_blank" rel="noopener">Hydro Flask Sale<span class="visually-hidden">, opens in a new tab</span></a></li>
+                </ul>
             </div>
         </section>
 
-        <section id="video" class="section section--alt">
-            <div class="section-head">
-                <span class="section-index">02</span>
-                <h2>Video &amp; multimedia</h2>
-            </div>
-            <p class="section-lede">Long-form video content produced for Cal Poly Pomona Enterprises — part of building out an owned YouTube presence alongside the organization's short-form social. FAA Part&nbsp;107 certified for aerial/drone production.</p>
-            <div class="video-grid">
-                <figure class="video-card">
-                    <div class="video-frame">
-                        <iframe src="https://www.youtube.com/embed/gR7g0qTylxs" title="CPPE video 1" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                </figure>
-                <figure class="video-card">
-                    <div class="video-frame">
-                        <iframe src="https://www.youtube.com/embed/X6a0sAch6sE" title="CPPE video 2" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                </figure>
-                <figure class="video-card">
-                    <div class="video-frame">
-                        <iframe src="https://www.youtube.com/embed/uwIfLKthljE" title="CPPE video 3" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                </figure>
-            </div>
-        </section>
-
-        <section id="emails" class="section">
-            <div class="section-head">
-                <span class="section-index">03</span>
-                <h2>Email campaigns</h2>
-            </div>
-            <p class="section-lede">HTML email built and deployed for CPPE marketing initiatives. A selection of live previews:</p>
-            <ul class="email-grid">
-                <li><a href="https://cppe.preview-beefreecontent.com/UeHX" target="_blank" rel="noopener">Mother's Day Buffet &amp; Brunch<span aria-hidden="true">&rarr;</span></a></li>
-                <li><a href="https://cppe.preview-beefreecontent.com/v8PA" target="_blank" rel="noopener">Waymaker<span aria-hidden="true">&rarr;</span></a></li>
-                <li><a href="https://cppe.preview-beefreecontent.com/VllQ" target="_blank" rel="noopener">Innovation Brew Works 10th Anniversary<span aria-hidden="true">&rarr;</span></a></li>
-                <li><a href="https://cppe.preview-beefreecontent.com/lUdL" target="_blank" rel="noopener">Pi Day<span aria-hidden="true">&rarr;</span></a></li>
-                <li><a href="https://cppe.preview-beefreecontent.com/Z29tD" target="_blank" rel="noopener">Fairoaks Walk Listing<span aria-hidden="true">&rarr;</span></a></li>
-                <li><a href="https://cppe.preview-beefreecontent.com/zmLi" target="_blank" rel="noopener">Pumpkin Fest<span aria-hidden="true">&rarr;</span></a></li>
-                <li><a href="https://cppe.preview-beefreecontent.com/rU73" target="_blank" rel="noopener">Student Housing<span aria-hidden="true">&rarr;</span></a></li>
-                <li><a href="https://cppe.preview-beefreecontent.com/bcvU" target="_blank" rel="noopener">Hydro Flask Sale<span aria-hidden="true">&rarr;</span></a></li>
-            </ul>
-        </section>
-
-        <section id="about" class="section section--alt">
-            <div class="about-layout">
-                <div class="about-media">
-                    <img src="images/profile_pic.jpg" alt="James Le" class="about-photo">
-                </div>
+        <section id="about" class="section section--tint" aria-labelledby="about-title">
+            <div class="section-inner about">
+                <img src="images/profile_pic.jpg" alt="Portrait of James Le" class="about-photo">
                 <div class="about-text">
-                    <div class="section-head">
-                        <span class="section-index">04</span>
-                        <h2>About</h2>
-                    </div>
-                    <p>I'm a web professional with a B.S. in Computer Science and 5+ years across web development, digital marketing, and project coordination. I like the whole path from build to result — standing up a site, running the campaign that fills it, and reading the analytics that say whether it worked.</p>
-                    <p>Most of my work lives where technical and marketing overlap: paid search and SEO, GA4 and email analytics, WordPress and Shopify, and web accessibility that keeps organizations on the right side of ADA and Section&nbsp;508.</p>
-                    <div class="skills-columns">
+                    <h2 id="about-title">About</h2>
+                    <p>I like the whole path from build to result: standing up a site, running the campaign that fills it, and reading the analytics that say whether it worked.</p>
+                    <p>Most of my work sits where technical and marketing overlap: WordPress and Shopify, GA4 and email analytics, paid search and SEO, and web accessibility that keeps organizations on the right side of the ADA and Section 508. Lately that includes building internal tools with AI-assisted development.</p>
+                    <div class="skills">
                         <div>
-                            <h3>Marketing &amp; data</h3>
+                            <h3>Web and platforms</h3>
                             <ul>
-                                <li>Google Ads (Search / Display / PMax)</li>
-                                <li>SEO &amp; SEM</li>
-                                <li>GA4 &amp; email analytics</li>
+                                <li>WordPress and Shopify</li>
+                                <li>HTML5, CSS, JavaScript</li>
+                                <li>SQL, AWS, SharePoint</li>
+                                <li>Figma and Webflow</li>
+                                <li>AI-assisted development</li>
+                                <li>WCAG 2.1 and Section 508</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>Marketing and data</h3>
+                            <ul>
+                                <li>Google Ads (Search, Display, Performance Max)</li>
+                                <li>SEO and SEM</li>
+                                <li>GA4 and email analytics</li>
                                 <li>HubSpot</li>
                                 <li>E-commerce optimization</li>
                             </ul>
                         </div>
-                        <div>
-                            <h3>Web &amp; platforms</h3>
-                            <ul>
-                                <li>WordPress &amp; Shopify</li>
-                                <li>HTML5, CSS, JavaScript</li>
-                                <li>SQL &middot; AWS &middot; SharePoint</li>
-                                <li>Figma &amp; Webflow</li>
-                                <li>WCAG 2.1 / Section 508</li>
-                            </ul>
-                        </div>
                     </div>
-                    <p class="cert-line">FAA Part 107 Remote Pilot &middot; HubSpot Digital Marketing &middot; WebAIM Accessibility &middot; Google Analytics</p>
+                    <p class="certs">Certifications: HubSpot Digital Marketing (2025), WebAIM Accessibility (2025), Google Analytics (2023), FAA Part 107 Remote Pilot (2026).</p>
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="section contact">
-            <div class="section-head">
-                <span class="section-index">05</span>
-                <h2>Let's talk</h2>
-            </div>
-            <p class="contact-lede">Open to new opportunities and collaborations in web, digital marketing, and accessibility.</p>
-            <div class="contact-links">
-                <a href="mailto:jamesL.2017@outlook.com" class="contact-link">
-                    <span class="contact-label">Email</span>
-                    <span class="contact-value">jamesL.2017@outlook.com</span>
-                </a>
-                <a href="https://linkedin.com/in/jaele" target="_blank" rel="noopener" class="contact-link">
-                    <span class="contact-label">LinkedIn</span>
-                    <span class="contact-value">linkedin.com/in/jaele</span>
-                </a>
+        <section id="contact" class="section" aria-labelledby="contact-title">
+            <div class="section-inner">
+                <h2 id="contact-title">Contact</h2>
+                <p class="section-intro">I'm open to new roles and collaborations in web, accessibility, and digital marketing.</p>
+                <ul class="contact-list">
+                    <li>Email: <a href="mailto:jamesL.2017@outlook.com">jamesL.2017@outlook.com</a></li>
+                    <li>LinkedIn: <a href="https://linkedin.com/in/jaele" target="_blank" rel="noopener">linkedin.com/in/jaele<span class="visually-hidden">, opens in a new tab</span></a></li>
+                </ul>
             </div>
         </section>
     </main>
 
     <footer class="site-footer">
-        <p>&copy; <span id="year">2026</span> James Le</p>
-        <a href="#top" class="to-top">Back to top &uarr;</a>
+        <div class="footer-inner">
+            <p>&copy; <span id="year">2026</span> James Le</p>
+            <p>Set in Atkinson Hyperlegible, a typeface designed by the Braille Institute for readers with low vision.</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
