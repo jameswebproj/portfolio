@@ -1,15 +1,21 @@
 /* James Le portfolio
-   Navy #1F3F77 matches the resume. Yellow #FFD23F is used only for keyboard focus and hover highlights.
+   Warm paper and petrol palette with a red-orange accent, using the AA-safe accent
+   shades for text. Yellow #FFD23F is used only for keyboard focus.
    Set in Atkinson Hyperlegible throughout. */
 
 :root {
-    --navy: #1F3F77;
-    --navy-dark: #16305C;
-    --ink: #22303F;
-    --muted: #4A5568;
-    --paper: #FFFFFF;
-    --tint: #EEF3F9;
-    --rule: #C9D5E6;
+    --paper: #FBFAF7;
+    --panel: #FFFFFF;
+    --ink: #14161A;
+    --body: #3A3D43;
+    --muted: #6B6F76;
+    --line: #E4DFD4;
+    --deep: #1B3A4B;
+    --deep-text: #D7DEE2;
+    --deep-muted: #9FB0B8;
+    --accent: #C6431F;
+    --accent-dark: #A83512;
+    --accent-light: #F2825E;
     --focus: #FFD23F;
     --wrap: 68rem;
     --measure: 66ch;
@@ -28,30 +34,33 @@ body {
     font-family: var(--font);
     font-size: 1.125rem;
     line-height: 1.6;
-    color: var(--ink);
+    color: var(--body);
     background: var(--paper);
 }
 
-h1, h2, h3 { color: var(--navy); font-weight: 700; }
+h1, h2, h3 { color: var(--ink); font-weight: 700; }
 p { margin: 0 0 1rem; }
 img { max-width: 100%; }
 
 /* Links: underlined so they never rely on color alone */
 a {
-    color: var(--navy);
+    color: var(--deep);
     text-decoration: underline;
     text-decoration-thickness: 2px;
     text-underline-offset: 0.2em;
 }
-a:hover { text-decoration-thickness: 3px; }
+a:hover {
+    text-decoration-thickness: 3px;
+    text-decoration-color: var(--accent);
+}
 
-/* Focus: yellow highlight with a navy bar underneath */
+/* Focus: yellow highlight with a dark bar underneath, on every background */
 a:focus-visible {
     outline: none;
     background: var(--focus);
-    color: var(--navy);
+    color: var(--ink);
     text-decoration: none;
-    box-shadow: 0 -2px 0 var(--focus), 0 4px 0 var(--navy);
+    box-shadow: 0 -2px 0 var(--focus), 0 4px 0 var(--ink);
 }
 
 .skip-link {
@@ -77,7 +86,7 @@ a:focus-visible {
 }
 
 /* Header (not sticky, so it never covers a focused element) */
-.site-header { border-bottom: 1px solid var(--rule); }
+.site-header { border-bottom: 1px solid var(--line); }
 .site-nav {
     max-width: calc(var(--wrap) + 3rem);
     margin: 0 auto;
@@ -91,6 +100,7 @@ a:focus-visible {
 .site-name {
     font-size: 1.25rem;
     font-weight: 700;
+    color: var(--ink);
     text-decoration: none;
 }
 .site-nav ul {
@@ -102,6 +112,7 @@ a:focus-visible {
     gap: 0.5rem 1.5rem;
 }
 .site-nav ul a {
+    color: var(--body);
     font-weight: 700;
     text-decoration: none;
 }
@@ -125,7 +136,7 @@ a:focus-visible {
     max-width: 52ch;
 }
 .proof { margin-bottom: 2.25rem; }
-.proof strong { color: var(--navy); }
+.proof strong { color: var(--accent); }
 
 .hero-actions {
     display: flex;
@@ -135,25 +146,28 @@ a:focus-visible {
 .btn {
     display: inline-block;
     padding: 0.75rem 1.5rem;
-    border: 2px solid var(--navy);
-    border-radius: 4px;
+    border: 2px solid var(--accent);
+    border-radius: 999px;
     font-weight: 700;
     text-decoration: none;
 }
-.btn-primary { background: var(--navy); color: var(--paper); }
-.btn-primary:hover { background: var(--navy-dark); border-color: var(--navy-dark); }
-.btn-secondary { background: transparent; color: var(--navy); }
-.btn-secondary:hover { background: var(--tint); }
+.btn-primary { background: var(--accent); color: var(--panel); }
+.btn-primary:hover { background: var(--accent-dark); border-color: var(--accent-dark); }
+.btn-secondary {
+    background: var(--panel);
+    color: var(--ink);
+    border-color: var(--line);
+}
+.btn-secondary:hover { border-color: var(--ink); }
 .btn:focus-visible {
     background: var(--focus);
-    color: var(--navy);
-    border-color: var(--navy);
-    box-shadow: 0 4px 0 var(--navy);
+    color: var(--ink);
+    border-color: var(--ink);
+    box-shadow: 0 4px 0 var(--ink);
 }
 
 /* Sections */
 .section { padding: 4.5rem 1.5rem; }
-.section--tint { background: var(--tint); }
 .section-inner {
     max-width: var(--wrap);
     margin: 0 auto;
@@ -168,19 +182,34 @@ a:focus-visible {
     margin-bottom: 2.5rem;
 }
 
+/* Dark sections */
+.section--dark {
+    background: var(--deep);
+    color: var(--deep-text);
+}
+.section--dark h2,
+.section--dark h3,
+.section--dark strong { color: var(--paper); }
+.section--dark a {
+    color: var(--paper);
+    text-decoration-color: var(--accent-light);
+}
+.section--dark a:hover { text-decoration-color: var(--paper); }
+.section--dark a:focus-visible { color: var(--ink); }
+
 /* Selected work: one row per project */
 .work-list {
     list-style: none;
     margin: 2rem 0 0;
     padding: 0;
-    border-top: 2px solid var(--navy);
+    border-top: 2px solid var(--ink);
 }
 .work-item {
     display: grid;
     grid-template-columns: 17rem 1fr;
     gap: 2.5rem;
     padding: 2rem 0;
-    border-bottom: 1px solid var(--rule);
+    border-bottom: 1px solid var(--line);
 }
 .work-meta h3 {
     font-size: 1.25rem;
@@ -193,7 +222,7 @@ a:focus-visible {
     color: var(--muted);
 }
 .work-body p { max-width: var(--measure); }
-.work-body strong { color: var(--navy); }
+.work-body strong { color: var(--accent); }
 .work-links {
     display: flex;
     flex-wrap: wrap;
@@ -201,52 +230,57 @@ a:focus-visible {
     margin: 0.25rem 0 0;
 }
 
-/* Internal tools */
-.tool {
+/* AI-assisted builds */
+.build {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
     gap: 3rem;
     align-items: start;
+    padding: 2.5rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
 }
-.tool-text h3 {
+.build:last-child { padding-bottom: 0; }
+.build h3 {
     font-size: 1.5rem;
     margin: 0 0 0.35rem;
 }
-.tool-org {
+.build-meta {
     font-size: 1rem;
-    color: var(--muted);
+    color: var(--deep-muted);
 }
-.tool-features {
-    margin: 0 0 1.25rem;
+.build-text p { max-width: var(--measure); }
+.build-features {
+    margin: 0;
     padding-left: 1.25rem;
 }
-.tool-features li { margin-bottom: 0.5rem; }
-.tool-shot { margin: 0; }
-.tool-shot img {
+.build-features li { margin-bottom: 0.6rem; }
+.build-links { margin: 0.25rem 0 0; }
+.build-shot { margin: 0; }
+.build-shot img {
     display: block;
     width: 100%;
     height: auto;
-    border: 1px solid var(--rule);
-    border-radius: 6px;
-    background: var(--paper);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 8px;
 }
-.tool-shot figcaption {
-    margin-top: 0.5rem;
+.build-shot figcaption {
+    margin-top: 0.6rem;
     font-size: 1rem;
-    color: var(--muted);
+    color: var(--deep-muted);
 }
-
-/* With no screenshot uploaded, the text takes the full width */
-.tool--no-shot { grid-template-columns: 1fr; }
-.tool--no-shot .tool-text { max-width: var(--measure); }
+/* A build with no screenshot (or one not uploaded yet) uses the full width */
+.build:not(:has(.build-shot)),
+.build--no-shot { grid-template-columns: 1fr; }
 
 /* Email */
 .award {
     max-width: var(--measure);
     margin: 0 0 2.5rem;
     padding: 1rem 1.25rem;
-    background: var(--tint);
-    border-left: 4px solid var(--navy);
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0;
 }
 .list-title {
     font-size: 1.25rem;
@@ -276,7 +310,8 @@ a:focus-visible {
     width: 100%;
     aspect-ratio: 1 / 1;
     object-fit: cover;
-    border-radius: 6px;
+    border-radius: 8px;
+    border: 3px solid rgba(255, 255, 255, 0.15);
 }
 .about-text p { max-width: var(--measure); }
 .skills {
@@ -286,16 +321,22 @@ a:focus-visible {
     margin: 2rem 0;
     max-width: 48rem;
 }
-.skills h3 {
+.section--dark .skills h3 {
     font-size: 1.125rem;
     margin: 0 0 0.5rem;
+    color: var(--accent-light);
 }
 .skills ul {
     margin: 0;
     padding-left: 1.25rem;
 }
 .skills li { margin-bottom: 0.3rem; }
-.certs { margin: 0; }
+.certs {
+    margin: 0;
+    padding-top: 1.25rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+    color: var(--deep-muted);
+}
 
 /* Contact */
 .contact-list {
@@ -307,7 +348,7 @@ a:focus-visible {
 .contact-list li { margin-bottom: 0.75rem; }
 
 /* Footer */
-.site-footer { border-top: 1px solid var(--rule); }
+.site-footer { border-top: 1px solid var(--line); }
 .footer-inner {
     max-width: calc(var(--wrap) + 3rem);
     margin: 0 auto;
@@ -330,7 +371,7 @@ a:focus-visible {
         grid-template-columns: 1fr;
         gap: 0.75rem;
     }
-    .tool, .about {
+    .build, .about {
         grid-template-columns: 1fr;
         gap: 2rem;
     }

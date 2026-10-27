@@ -8,8 +8,8 @@ document.addEventListener('DOMContentLoaded', function () {
         var hideFigure = function () {
             var figure = img.closest('figure');
             if (figure) { figure.hidden = true; }
-            var tool = img.closest('.tool');
-            if (tool) { tool.classList.add('tool--no-shot'); }
+            var build = img.closest('.build');
+            if (build) { build.classList.add('build--no-shot'); }
         };
         if (img.complete && img.naturalWidth === 0) {
             hideFigure();
@@ -18,4 +18,3 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
-

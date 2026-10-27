@@ -10,7 +10,7 @@
     <meta property="og:description" content="Accessible websites, internal tools, and digital campaigns with measurable results.">
     <meta property="og:url" content="https://jameswebproj.github.io/portfolio/">
     <meta property="og:image" content="https://jameswebproj.github.io/portfolio/images/profile_pic.jpg">
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231F3F77'/%3E%3Crect x='8' y='22' width='16' height='4' fill='%23FFD23F'/%3E%3C/svg%3E">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231B3A4B'/%3E%3Crect x='8' y='22' width='16' height='4' fill='%23F2825E'/%3E%3C/svg%3E">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
@@ -24,7 +24,7 @@
             <a href="#top" class="site-name">James Le</a>
             <ul>
                 <li><a href="#work">Work</a></li>
-                <li><a href="#tools">Tools</a></li>
+                <li><a href="#builds">Builds</a></li>
                 <li><a href="#email">Email</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -87,10 +87,10 @@
                             <p>Wesson Tech Services<br>2021–2023</p>
                         </div>
                         <div class="work-body">
-                            <p>Managed the full build for client sites, including health clinics, TV studios, consulting firms, and breweries, from scope to delivery using WordPress and Webflow.</p>
+                            <p>Managed the full build for client sites, including health and skin-care clinics, TV studios, and consulting firms, from scope to delivery using WordPress and Webflow.</p>
                             <p class="work-links">
                                 <a href="https://www.myofficeapps.com/" target="_blank" rel="noopener">MyOfficeApps site<span class="visually-hidden">, opens in a new tab</span></a>
-                                <a href="https://ibrewworks.com/" target="_blank" rel="noopener">Innovation Brew Works site<span class="visually-hidden">, opens in a new tab</span></a>
+                                <a href="https://dru.com/" target="_blank" rel="noopener">dru.com<span class="visually-hidden">, hair and skin clinic site, opens in a new tab</span></a>
                             </p>
                         </div>
                     </li>
@@ -108,26 +108,37 @@
             </div>
         </section>
 
-        <section id="tools" class="section section--tint" aria-labelledby="tools-title">
+        <section id="builds" class="section section--dark" aria-labelledby="builds-title">
             <div class="section-inner">
-                <h2 id="tools-title">Internal tools</h2>
-                <p class="section-intro">I build internal tools with AI-assisted development, from the first requirement to a deployed tool people use.</p>
-                <div class="tool">
-                    <div class="tool-text">
-                        <h3>Marketing web tool</h3>
-                        <p class="tool-org">Cal Poly Pomona Enterprises<br>2026</p>
-                        <p>I directed Claude to design and build an internal tool for CPPE's marketing team, replacing a manual process for collecting finished creative. It runs on its own domain and is in active use.</p>
-                        <ul class="tool-features">
-                            <li>Staff upload finished assets to one shared place.</li>
-                            <li>It collects open and click statistics for eblasts.</li>
-                            <li>It generates QR codes for print and event materials.</li>
+                <h2 id="builds-title">AI-assisted builds</h2>
+                <p class="section-intro">I build sites and tools with AI-assisted development, from the first requirement to something people use.</p>
+
+                <article class="build">
+                    <div class="build-text">
+                        <h3>Marketing staff portal</h3>
+                        <p class="build-meta">Internal tool, Cal Poly Pomona Enterprises<br>2026</p>
+                        <p>I directed Claude to design and build a staff portal for CPPE's marketing team. It replaced manual handoffs for creative assets, email edits, and QR codes, and it runs on its own domain.</p>
+                        <ul class="build-features">
+                            <li><strong>Media Drop:</strong> staff upload finished creative, filed by department.</li>
+                            <li><strong>Email Stats:</strong> open and click statistics for eblasts.</li>
+                            <li><strong>QR Codes:</strong> codes whose destination can change after printing, with scan counts.</li>
+                            <li><strong>Email Review:</strong> requesters edit an email's wording through a private link, with layout and images locked.</li>
                         </ul>
                     </div>
-                    <figure class="tool-shot">
-                        <img src="images/cppen-tool.png" alt="Screenshot of the marketing web tool dashboard" data-optional>
-                        <figcaption>The tool's dashboard. It's login-protected, so internal data has been removed from this screenshot.</figcaption>
+                    <figure class="build-shot">
+                        <img src="images/cppen-tool.png" width="1600" height="1017" alt="Screenshot of the staff portal's QR Codes tab, showing tabs for Media Drop, Email Stats, QR Codes, and Email Review, step-by-step instructions, and a form for generating a QR code." data-optional>
+                        <figcaption>The QR Codes tab. The portal is login-protected, so saved codes are cropped out.</figcaption>
                     </figure>
-                </div>
+                </article>
+
+                <article class="build">
+                    <div class="build-text">
+                        <h3>Innovation Brew Works website</h3>
+                        <p class="build-meta">Public website, Cal Poly Pomona Enterprises</p>
+                        <p>I built the new public site for Innovation Brew Works, CPPE's on-campus brewery, in HTML, CSS, and PHP with AI-assisted development. It includes a self-serve updater, protected by login throttling and upload checks, so brewery staff publish beer and food menus themselves instead of waiting on manual web edits.</p>
+                        <p class="build-links"><a href="https://ibrewworks.com/" target="_blank" rel="noopener">Innovation Brew Works site<span class="visually-hidden">, opens in a new tab</span></a></p>
+                    </div>
+                </article>
             </div>
         </section>
 
@@ -150,7 +161,7 @@
             </div>
         </section>
 
-        <section id="about" class="section section--tint" aria-labelledby="about-title">
+        <section id="about" class="section section--dark" aria-labelledby="about-title">
             <div class="section-inner about">
                 <img src="images/profile_pic.jpg" alt="Portrait of James Le" class="about-photo">
                 <div class="about-text">
@@ -162,7 +173,7 @@
                             <h3>Web and platforms</h3>
                             <ul>
                                 <li>WordPress and Shopify</li>
-                                <li>HTML5, CSS, JavaScript</li>
+                                <li>HTML5, CSS, JavaScript, PHP</li>
                                 <li>SQL, AWS, SharePoint</li>
                                 <li>Figma and Webflow</li>
                                 <li>AI-assisted development</li>
